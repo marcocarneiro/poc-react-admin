@@ -2,8 +2,14 @@ import { Edit, Create, ReferenceInput, SimpleForm, TextInput } from 'react-admin
 import { List, Datagrid, TextField, ReferenceField, EditButton } from "react-admin"
 import { useRecordContext} from "react-admin"
 
+//Filter
+const postFilters = [
+    <TextInput source="q" label="Search" alwaysOn />,
+    <ReferenceInput source="userId" label="User" reference="users" />,
+]
+
 export const PostList = () => (
-    <List>
+    <List filters={postFilters}>
         <Datagrid>
             <TextField source="id" />
             <ReferenceField source="userId" reference="users" link="show" />          
