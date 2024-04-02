@@ -10,5 +10,5 @@ export default defineConfig({
     server: {
         host: true,
     },
-    base: '/poc-react-admin',
+    base: './',
 });
